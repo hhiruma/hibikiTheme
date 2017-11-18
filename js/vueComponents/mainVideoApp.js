@@ -3,9 +3,9 @@ const url = 'https://www.youtube-nocookie.com/embed/VMzIP90f86Q';
 const mainVideoPlayer = {
     template: `
         <div v-if='visible'>
-            <iframe 
-                :src='videoUrl' 
-                frameborder="0" 
+            <iframe
+                :src="videoUrl"
+                frameborder="0"
                 allowfullscreen>
             </iframe>
         </div>

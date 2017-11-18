@@ -1,0 +1,19 @@
+.stageTitle{
+    position: relative;
+	padding: 0.2em 0.5em;
+	background: -moz-linear-gradient(rgb(200, 30, 30), black);
+	background: -webkit-linear-gradient(rgb(200, 30, 30), black);
+	background: linear-gradient(rgb(200, 30, 30), black);
+	color: white;
+	font-weight: lighter;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.stagePostMainContainer{
+    width: 95%;
+    margin: 5%;
+    border: 1px solid black;
+}

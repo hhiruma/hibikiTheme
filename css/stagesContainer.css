@@ -1,0 +1,202 @@
+main #stagesContainer{
+	height: 90%;
+	margin: 2.5%;
+	padding: 2.5%;
+
+	position: absolute;
+	overflow: hidden;
+
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* stages tab box container */
+main #stagesContainer .stagesTabBoxContainer{
+	overflow: scroll;
+	height: 72vh;
+}
+
+main #stagesContainer .stagesTabBox{
+	margin: 2.5% 0;
+	padding: 2.5%;
+
+	align-items: center;
+	justify-content: space-around;
+	display: flex;
+
+	background-color: rgb(54, 54, 54);
+}
+
+main #stagesContainer .stagesTabBox .stagesTabBoxDesc {
+	width: 65%;
+	height: 100%;
+	margin: 0 1% 0 0;
+	padding: 1em;
+
+	background-color: rgb(243, 243, 243);
+
+	flex-grow: 1;
+}
+
+main #stagesContainer .stagesTabBox .stagesTabBoxContainer {
+	display: flex;
+	flex-direction: column;
+	width: 35%;
+
+}
+
+main #stagesContainer .stagesTabBox .stagesTabBoxVideoContainer .stagesTabBoxVideo {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+
+	flex-grow: 1;
+}
+
+/* stages tab row */
+.stagesTabRow:before {
+    z-index: 1;
+}
+
+.stagesTabRow {
+    text-align: center;
+    list-style: none;
+	height: 5%;
+	overflow: hidden;
+
+	position: relative;
+
+	display: flex;
+}
+
+.stagesTabRow:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #AAA;
+    z-index: 1;
+}
+
+.stagesTabRow li {
+    border: 1px solid #AAA;
+    background: #ECECEC;
+	height: 100%;
+
+	position: relative;
+	z-index: 0;
+
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+
+	background:      -o-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+    background:     -ms-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+    background:    -moz-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+    background: -webkit-linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+    background: linear-gradient(top, #ECECEC 50%, #D1D1D1 100%);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
+    text-shadow: 0 1px #FFF;
+    margin: 0 -5px;
+    padding: 0 20px;
+}
+
+.stagesTabRow li:before,
+.stagesTabRow li:after {
+    position: absolute;
+    bottom: -1px;
+    width: 6px;
+    height: 6px;
+    content: " ";
+}
+.stagesTabRow li:before {
+	left: -6px;
+
+	border-bottom-right-radius: 6px;
+	border-width: 0 1px 1px 0;
+
+	box-shadow: 2px 2px 0 #ECECEC;
+}
+.stagesTabRow li:after {
+	right: -6px;
+
+	border-bottom-left-radius: 6px;
+	border-width: 0 0 1px 1px;
+
+	box-shadow: -2px 2px 0 #ECECEC;
+}
+
+.stagesTabRow li.selectedTab {
+	background: #FFF;
+	color: #000;
+
+	z-index: 2;
+    border-bottom-color: #FFF;
+}
+
+.stagesTabRow li .selectedTab:before {
+    box-shadow: 2px 2px 0 #FFF;
+}
+
+.stagesTabRow li .selectedTab:after{
+    box-shadow: -2px 2px 0 #FFF;
+}
+
+/* stages video modal */
+.stagesTabBoxContainer .videoShowModal {
+	display: block;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 3;
+	width: 500px;
+	height: 350px;
+	margin: auto;
+	background-color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.stagesTabBoxContainer .videoShowModal .modalVideo{
+	height: 100%;
+	width: 100%;
+}
+
+.stagesTabBoxContainer .modalBackground {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,.6);
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.stagesTabBoxContainer .showVideo {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* stages container scroll bar */
+main #stagesContainer::-webkit-scrollbar{
+	background-color: gray;
+	width: 5px;
+}
+
+main #stagesContainer::-webkit-scrollbar-thumb{
+	background-color: white;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
+}
+
+main #stagesContainer::-webkit-scrollbar-corner{
+	background-color: gray;
+}

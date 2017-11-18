@@ -1,0 +1,152 @@
+main #stagesAllContainer{
+    height: 90%;
+    width: 95%;
+    margin: 2.5%;
+
+	position: absolute;
+    overflow: hidden;
+
+    border: 1px solid black;
+}
+
+main #stagesAllContainer #stagePageTitle{
+    background: -webkit-linear-gradient(top, rgba(245,246,246,1) 0%,rgba(219,220,226,1) 21%,rgba(184,186,198,1) 49%,rgba(221,223,227,1) 80%,rgba(245,246,246,1) 100%);
+    color: black;
+
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 0 0.5em;
+
+    font-size: 2em;
+}
+
+main #stagesAllContainer #stagePageMain{
+    display: flex;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* stagePage Tab related */
+main #stagesAllContainer #stagePageMain #stagePageTabContainer{
+    width: 20%;
+    height: 100%;
+    border-right: double 10px rgb(248, 245, 213);
+}
+
+main #stagesAllContainer #stagePageMain #stagePageTabContainer label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: -webkit-linear-gradient(left, rgba(186,0,0,1) 1%,rgba(213,43,43,1) 45%,rgba(255,214,214,1) 99%);
+    color: white;
+    width: 92.5%;
+    height: 2em;
+    margin: 5px 5% 5px 2.5%;
+}
+
+main #stagesAllContainer #stagePageMain #stagePageTabContainer input:checked ~ label{
+    background-color: green;
+}
+
+/* stagePage Content related */
+main #stagesAllContainer #stagePageMain #stagePageContentContainer{
+    width: 80%;
+    overflow: scroll;
+}
+
+main #stagesAllContainer #stagePageMain #stagePageContentContainer .stagePostContainer{
+    width: 95%;
+    margin: 2.5% 2.5%;
+}
+
+main #stagesAllContainer #stagePageMain #stagePageContentContainer .stagePostContainer .stagePostTitle{
+    position: relative;
+    padding: 0.2em 0.5em;
+    background: -moz-linear-gradient(top, rgba(232,4,8,1) 0%, rgba(153,0,28,1) 100%); 
+    background: -webkit-linear-gradient(top, rgba(232,4,8,1) 0%,rgba(153,0,28,1) 100%);
+    background: linear-gradient(to bottom, rgba(232,4,8,1) 0%,rgba(153,0,28,1) 100%); 
+	color: white;
+	font-weight: lighter;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+main #stagesAllContainer #stagePageMain #stagePageContentContainer .stagePostContainer .stagePostContentContainer{
+    width: 100%;
+    display: flex;
+
+
+    /*
+    background: -moz-linear-gradient(left, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+    background: -webkit-linear-gradient(left, #b5bdc8 0%,#828c95 36%,#28343b 100%);
+    background: linear-gradient(to right, #b5bdc8 0%,#828c95 36%,#28343b 100%);
+    */
+    background: -moz-linear-gradient(-80deg, rgba(255,255,255,1) 0%, rgba(241,241,241,1) 50%, rgba(225,225,225,1) 51%, rgba(246,246,246,1) 100%); 
+    background: -webkit-linear-gradient(-80deg, rgba(226,226,226,1) 0%,rgba(219,219,219,1) 50%,rgba(209,209,209,1) 51%,rgba(254,254,254,1) 100%); 
+}
+
+main #stagesAllContainer #stagePageMain #stagePageContentContainer .stagePostContainer .stagePostContentContainer .descContainer {
+    margin: 2.5%;
+    width: 60%;
+}
+main #stagesAllContainer #stagePageMain #stagePageContentContainer .stagePostContainer .stagePostContentContainer .mediaContainer
+{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5%;
+    width: 30%;
+}
+
+main #stagesAllContainer #stagePageMain #stagePageContentContainer .stagePostContainer .stagePostContentContainer>div .mediaContainer{
+    margin: 0;
+}
+
+/* hover css underline from left */
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: white;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+  }
+
+  /* hover css forward */
+  .hvr-forward {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
