@@ -12,6 +12,8 @@
 		<?php get_template_part('original/aboutUsPage'); ?>
 	<?php elseif (is_page('stages')):?>
 		<?php get_template_part('original/stagesPage'); ?>
+	<?php elseif (is_page('contact')):?>
+		<?php get_template_part('original/contactPage'); ?>
 	<?php endif ?>
 </main>
 
