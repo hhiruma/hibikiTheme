@@ -1,0 +1,38 @@
+#contactContainer {
+    width: 100%;
+    height: 100%;
+}
+
+#contactContainer #contactTitle{
+    width: 90%;
+    height: 10%;
+
+    padding: 1% 2.5%;
+    margin: 0 2.5%;
+}
+
+#contactContainer #contactMain{
+    width: 95%;
+    height: 80%;
+
+    margin: 0 2.5%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    overflow: scroll;
+}
+
+#contactContainer #contactMain .contactFormElem{
+    padding: 0.5% 5%;
+}
+
+#contactContainer #contactMain .wpcf7[role="form"]{
+    margin: 3%;
+    color: white;
+}
+
+#contactContainer #contactMain .wpcf7[role="form"] input,
+#contactContainer #contactMain .wpcf7[role="form"] textarea{
+    border-color: black;
+    border-width: 1px;
+}
